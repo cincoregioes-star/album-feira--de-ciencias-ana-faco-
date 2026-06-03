@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Da Cozinha ao Solo — Álbum Digital</title>
+  <meta name="description" content="Álbum educativo sobre fertilizantes orgânicos, resíduos domésticos e horta pedagógica." />
+  <meta name="theme-color" content="#1f6b3a" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topo">
+      <div class="marca">
+        <strong id="marcaTitulo">Da Cozinha ao Solo</strong>
+        <span id="marcaSubtitulo">Álbum educativo sobre fertilizantes orgânicos</span>
+      </div>
+      <nav class="nav">
+        <button id="btnCapa" type="button">Capa</button>
+        <button id="btnQuiz" type="button">Simulados</button>
+        <button id="btnGame" type="button">Game</button>
+        <button id="btnPacoteTopo" type="button">Pacotes: <span id="pacotesTopo">0</span></button>
+        <button id="btnPrevTopo" type="button">← Página</button>
+        <button id="btnNextTopo" type="button">Página →</button>
+        <button id="btnAudio" type="button">Som: OFF</button>
+      </nav>
+    </header>
+
+    <main class="palco">
+      <aside class="lateral">
+        <section class="box destaque">
+          <span class="tag">Pacotes</span>
+          <p>Cada pacote abre <b>3 figurinhas</b>. Cole manualmente no álbum e clique na figurinha colada para abrir a ficha técnica em tela cheia.</p>
+          <button id="btnAbrirLateral" type="button" class="btn-dourado">Abrir pacote</button>
+        </section>
+        <section class="status">
+          <div><b id="totalColadas">0</b><span>coladas</span></div>
+          <div><b id="totalDisponiveis">0</b><span>para colar</span></div>
+          <div><b id="totalPacotes">0</b><span>pacotes</span></div>
+          <div><b id="totalRepetidas">0</b><span>repetidas</span></div>
+        </section>
+        <section class="controles">
+          <button id="btnPrev" type="button">← Página</button>
+          <button id="btnNext" type="button">Página →</button>
+        </section>
+        <section class="box dica"><b>Simulados</b><p>São 5 simulados. Até 9 acertos libera 1 pacote. 10 acertos libera 2 pacotes.</p></section>
+        <section class="box dica"><b>Game</b><p>Ao terminar cada fase, o aluno ganha 1 figurinha avulsa no álbum.</p></section>
+      </aside>
+
+      <section class="area">
+        <div class="barra">
+          <div><span id="paginaAtualLabel">Página 1</span><b id="tituloPagina">Capa</b></div>
+          <button id="btnAbrirTopo" type="button" class="btn">Abrir pacote</button>
+        </div>
+        <div class="livro capa" id="livro">
+          <div class="pagina esquerda" id="paginaEsquerda"></div>
+          <div class="miolo" aria-hidden="true"></div>
+          <div class="pagina direita" id="paginaDireita"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <section class="modal" id="modalPacote" aria-hidden="true"><div class="card-modal"><button class="fechar" id="fecharPacote" type="button">×</button><span class="tag">Pacote</span><h2>Abrir pacote</h2><p id="avisoPacote"></p><button class="btn-dourado" id="btnAbrirPacote" type="button">Abrir pacote agora</button><div id="resultadoPacote" class="resultado"></div></div></section>
+  <section class="modal ficha-full" id="modalFicha" aria-hidden="true"><div class="card-modal ficha-card"><button class="fechar" id="fecharFicha" type="button">×</button><div id="conteudoFicha"></div></div></section>
+  <section class="modal" id="modalQuiz" aria-hidden="true"><div class="card-modal quiz-card"><button class="fechar" id="fecharQuiz" type="button">×</button><span class="tag">Simulados</span><h2>Simulados do Álbum</h2><p>Escolha um simulado. Cada simulado só libera recompensa uma vez.</p><div id="quizArea"></div></div></section>
+
+  <audio id="audioFundo" src="audios/fundo.mp3" loop></audio>
+  <audio id="audioPacote" src="audios/abrir-pacote.mp3"></audio>
+  <audio id="audioFicha" src="audios/abrir-ficha.mp3"></audio>
+  <audio id="audioColar" src="audios/colar-figurinha.mp3"></audio>
+  <audio id="audioClick" src="audios/click.mp3"></audio>
+  <audio id="audioDetalhes" src="audios/detalhes.mp3"></audio>
+  <audio id="audioPagina" src="audios/virar-pagina.mp3"></audio>
+
+  <script src="dados-tema.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
