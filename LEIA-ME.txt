@@ -1,0 +1,19 @@
+ÁLBUM DIGITAL — DA COZINHA AO SOLO
+
+Estrutura pronta:
+- 36 figurinhas em figurinhas/figurinha-01.webp até figurinha-36.webp
+- Fichas técnicas detalhadas ao clicar na figurinha colada
+- Modal de ficha em tela cheia com imagem grande + texto detalhado
+- Pacotes com 3 figurinhas
+- 3 pacotes iniciais grátis
+- 5 simulados: até 9 acertos libera 1 pacote; 10 acertos libera 2 pacotes
+- Game com 5 fases: ao concluir cada fase, libera 1 figurinha avulsa
+- Áudios incluídos na pasta audios
+
+Publicação:
+1. Envie todos os arquivos para o GitHub Pages.
+2. Mantenha a estrutura de pastas.
+3. Abra index.html.
+
+Observação:
+A figurinha 18 não veio no arquivo 13.zip; foi criado um placeholder para manter a sequência completa. Substitua depois por figurinhas/figurinha-18.webp.
